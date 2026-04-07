@@ -8,7 +8,17 @@ import { sanhokMap } from './sanhok';
 import { taegoMap } from './taego';
 import { vikendiMap } from './vikendi';
 
-const MAPS = [erangelMap, miramarMap, sanhokMap, karakinMap, paramoMap, taegoMap, destonMap, vikendiMap, rondoMap];
+const MAPS = [
+   destonMap,
+   erangelMap,
+   karakinMap,
+   miramarMap, 
+   paramoMap,
+   rondoMap,
+   sanhokMap, 
+   taegoMap, 
+   vikendiMap, 
+      ];
 export * from './map';
 export { MAPS };
 

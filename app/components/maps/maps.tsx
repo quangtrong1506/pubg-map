@@ -7,7 +7,7 @@ const MapInner = dynamic(() => import('../map-draw/map'), {
    ssr: false,
 });
 export const Maps = () => {
-   const [selectedMap, setSelectedMap] = useState(MAPS[8]);
+   const [selectedMap, setSelectedMap] = useState(MAPS[0]);
    const [showSecretBunkers, setShowSecretBunkers] = useState<boolean>(true);
    const [showBearCave, setShowBearCave] = useState<boolean>(true);
    const [measureDistance, setMeasureDistance] = useState<boolean>(false);
