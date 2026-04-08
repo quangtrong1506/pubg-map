@@ -12,12 +12,12 @@ export const Maps = () => {
    const [showBearCave, setShowBearCave] = useState<boolean>(true);
    const [measureDistance, setMeasureDistance] = useState<boolean>(false);
    return (
-      <div className="w-full flex justify-center">
-         <div className="min-w-2xs">
+      <div className="w-full flex justify-center flex-wrap lg:flex-nowrap">
+         <div className="lg:w-xs w-full grid lg:grid-cols-1 grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-2 p-4 content-start">
             {MAPS.map((map) => (
-               <div className="w-full mt-4" key={map.name}>
+               <div className="" key={map.name}>
                   <div
-                     className={`mx-4 my-1 select-none border border-gray-200 rounded py-2 px-4 text-lg font-medium ${selectedMap.id === map.id ? 'text-green-600 border-green-500' : 'text-gray-500 border-gray-200'}`}
+                     className={`select-none border text-center border-gray-200 rounded py-2 px-4 text-lg font-medium ${selectedMap.id === map.id ? 'text-green-600 border-green-500' : 'text-gray-500 border-gray-200'}`}
                      onClick={() => setSelectedMap(map)}
                   >
                      {map.name}
@@ -25,7 +25,7 @@ export const Maps = () => {
                </div>
             ))}
          </div>
-         <div className="aspect-square h-screen bg-amber-200">
+         <div className="aspect-square w-full lg:h-screen bg-amber-200">
             <MapInner
                overlayUrl={selectedMap.image}
                showSecretBunkers={showSecretBunkers}
@@ -36,7 +36,7 @@ export const Maps = () => {
                bearCave={selectedMap.bearCave}
             />
          </div>
-         <div className="min-w-2xs flex flex-col items-center">
+         <div className="w-xs flex flex-col items-center">
             <h2 className="text-4xl font-bold mt-4">{selectedMap.name}</h2>
             {selectedMap.secretBunkers.length > 0 && (
                <div className="w-full mt-4">

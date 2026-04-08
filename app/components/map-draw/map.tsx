@@ -6,7 +6,7 @@ import { ImageOverlay, MapContainer } from 'react-leaflet';
 
 import 'leaflet/dist/leaflet.css';
 import { MapCircle } from './map-circle';
-import { MapClickCoords } from './map-click-coords';
+// import { MapClickCoords } from './map-click-coords';
 import { MapMeasure } from './map-measure';
 
 const bounds: [[number, number], [number, number]] = [
@@ -48,7 +48,7 @@ export default function MapInner({
          <ImageOverlay url={overlayUrl} bounds={bounds} />
 
          {/* Ấn để hiện toạ độ */}
-         <MapClickCoords />
+         {/* <MapClickCoords /> */}
 
          {/* Hầm bí mật */}
          {showSecretBunkers &&
